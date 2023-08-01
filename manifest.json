@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "WebBlocker",
+    "version": "0.0.1",
+    "description": "Block your selected sites",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "action": {
+        "default_popup": "main/popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["*://*/*"], 
+          "js": ["./main/content.js"]
+        }]
+    
+}
